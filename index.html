@@ -1,0 +1,41 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hệ thống thi trắc nghiệm</title>
+  <script type="module" src="app.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 min-h-screen p-4">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-center">📝 Thi Trắc Nghiệm Đa Môn</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-center mb-6">
+      <div>
+        <label class="font-semibold">Chọn môn học:</label><br/>
+        <select id="monHoc" class="p-2 border rounded">
+          <option value="ctdlgt">CTDL & Giải thuật</option>
+          <option value="csdl">Cơ sở dữ liệu</option>
+          <option value="web">Lập trình Web</option>
+        </select>
+      </div>
+      <div>
+        <label class="font-semibold">Chọn đề:</label><br/>
+        <select id="deThi" class="p-2 border rounded">
+          <option value="de1">Đề số 1</option>
+          <option value="de2">Đề số 2</option>
+        </select>
+      </div>
+    </div>
+
+    <button onclick="loadDe()" class="bg-blue-500 text-white px-4 py-2 rounded mb-6">Bắt đầu</button>
+    <form id="quizForm" class="space-y-6"></form>
+    <div class="text-center mt-8">
+      <button id="submitBtn" onclick="submitQuiz(event)" class="bg-green-600 text-white px-6 py-3 rounded hidden">Nộp bài</button>
+    </div>
+    <div id="result" class="text-center mt-4 text-xl font-bold"></div>
+  </div>
+</body>
+</html>
